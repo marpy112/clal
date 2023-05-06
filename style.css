@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+
+.bg{
+    z-index :2;
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+    height: 100%;
+    overflow: hidden;
+    background-blend-mode: multiply;
+}
+html,body {
+   
+    display: grid;
+    height: 100%;
+    width: 100%;
+    place-items: center;
+
+    background: linear-gradient(-45deg, red,green,blue,yellow); 
+    animation: animate 15s ease infinite;
+    background-size: 400% 400%;
+
+
+}
+
+
+::selection{
+    background: #4158d0;
+    color: #fff;
+}
+.wrapper{
+width: 390px;    
+    max-width: 1600px;
+    max-height: 1500px  ;
+    margin-left: auto;
+    margin-right: auto;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+min-width: fit-content;
+}
+.wrapper .title{
+    font-size: 20px;
+    font-weight: 600;
+    text-align:center;
+    line-height: 50 px;
+    color: #fff;
+    user-select: none;
+    border-radius: 15px 15px 0 0;
+    background-attachment: fixed;
+
+    background:  60% 505% url(img/bg.png);background-repeat:no repeat;overflow-y:hidden;float:top;
+
+}
+
+
+.wrapper form{
+    padding: 10px 30px 50px 30px;
+}
+.wrapper form .field{
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    position: relative;
+}
+.wrapper form .field input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 15px;
+    padding-left: 20px;
+    border: 1px solid lightgray;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+.wrapper form .field input:focus,
+form .field input:valid{
+    border-color: #4158d0;
+}
+.wrapper form .field label{
+    position: absolute;
+    top:50%;
+    left: 20px;
+    color: #999;
+    font-weight: 400;
+    font-size: 15px;
+    pointer-events: none;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+}
+form .field input:focus ~ label,
+form .field input:valid ~ label{
+    top: 0%;
+    font-size: 16px;
+    color: #4158d0;
+    background: #fff;
+    transform: translateY(-50%);
+}
+form .container{
+    display: flex;
+    width: 100%;
+    font-size: 16px;
+    align-items: center;
+    justify-content: space-around;
+}
+form .container .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+form .container label{
+    color: #262626;
+    user-select: none;
+    padding-left: 5px;
+}
+form .field input[type="submit"]{
+    color: #fff;
+    border: none;
+    padding-left: 0;
+    margin-top: -10px;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+    background: linear-gradient(-135deg, #c850c0, #4158d0);
+    transition: all 0.3s ease;
+}
+form .field input[type="submit"]:active{
+    transform-origin: scale(0.95);
+}
+form .signup-link{
+    color: #262626;
+    margin-top: 20px;
+    text-align: center;
+}
+form .pass-link a,
+form .signup-link a{
+    color: #4158d0;
+    text-decoration: none;
+}
+
+@keyframes animate{
+0%{
+    background-position: 0 50%;
+}
+50%{
+    background-position: 100% 50%;
+}
+100%{
+    background-position: 0 50%;
+}
+}
+.logo {
+    height: 200px;
+    width: 200px;
+    align-items: center;
+
+}
+.card-body {
+position: absolute;
+top: 0;
+right: 200px;
+}
+.container my-5 {
+  margin-left: 30%;
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+  border: 1px solid #c8ced3;
+  border-radius: 0.25rem;
+}
